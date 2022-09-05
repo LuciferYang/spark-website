@@ -54,9 +54,6 @@ initially launched Spark
   - We are using Spark Core, Streaming, MLlib and Graphx. We leverage Spark and Hadoop ecosystem 
   to build cost effective data center solution for our customer in telco industry as well as 
   other industrial sectors.
-- <a href="https://atp.io">atp</a>
-  - Predictive models and learning algorithms to improve the relevance of programmatic marketing.
-  - Components used: Spark SQL, MLLib.
 - <a href="http://www.autodesk.com">Autodesk</a>
 - <a href="http://www.baidu.com">Baidu</a>
 - <a href="http://www.bakdata.com/">Bakdata</a> – using Spark (and Shark) to perform interactive 
@@ -128,7 +125,6 @@ and external data sources, driving holistic and actionable insights.
 - <a href="http://www.infoobjects.com">InfoObjects</a>
   - Award winning Big Data consulting company with focus on Spark and Hadoop
 - <a href="http://en.inspur.com">Inspur</a>
-- <a href="http://www.sehir.edu.tr/en/">Istanbul Sehir University</a>
 - <a href="http://www.kenshoo.com/">Kenshoo</a>
   - Digital marketing solutions and predictive media optimization
 - <a href="http://www.kelkoo.co.uk">Kelkoo</a>
@@ -149,19 +145,8 @@ New York and Boston areas
   - Using Spark to build different recommendation systems for recipes and foods.
 - <a href="http://deepspace.jpl.nasa.gov/">NASA JPL - Deep Space Network</a>
 - <a href="http://www.163.com/">Netease</a>
-- <a href="http://nsn.com">Nokia Solutions and Networks</a>
+- <a href="https://www.nokia.com/networks/">Nokia Solutions and Networks</a>
 - <a href="http://www.nttdata.com/global/en/">NTT DATA</a>
-- <a href="http://www.nubetech.co">Nube Technologies</a>
-  - Nube provides solutions for data curation at scale helping customer targeting, accurate 
-  inventory and efficient analysis.
-- <a href="http://ooyala.com">Ooyala, Inc.</a> – Powering personalized video experiences 
-across all screens
-  - See our blog post on how we use 
-  <a href="http://engineering.ooyala.com/blog/fast-spark-queries-memory-datasets">Spark for 
-  Fast Queries</a>
-  - See our presentation on 
-  <a href="http://www.slideshare.net/EvanChan2/cassandra2013-spark-talk-final">Cassandra, Spark, 
-  and Shark</a>
 - <a href="https://www.opentable.com/">Opentable</a>
   - Using Apache Spark for log processing and ETL. The data obtained feeds the recommender 
   system powered by Spark MLLIB Matrix Factorization. We are evaluating the use of Spark 
@@ -191,7 +176,7 @@ efficiently.
 - <a href="http://www.sailthru.com/">Sailthru</a>
   - Uses Spark to build predictive models and recommendation systems for marketing automation 
   and personalization.
-- <a href="http://www.sisa.samsung.com/">Samsung Research America</a>
+- <a href="https://www.sra.samsung.com/">Samsung Research America</a>
 - <a href="http://www.shopify.com/">Shopify</a>
 - <a href="https://www.simba.com/">Simba Technologies</a>
   - BI/reporting/ETL for Spark and beyond
