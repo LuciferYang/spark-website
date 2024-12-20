@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-     Spark 3.4.1 released | Apache Spark
+     Spark Release 3.5.4 | Apache Spark
     
   </title>
 
@@ -153,10 +153,64 @@
 <div class="container">
   <div class="row mt-4">
     <div class="col-12 col-md-9">
-      <h2>Spark 3.4.1 released</h2>
+      <h2>Spark Release 3.5.4</h2>
 
 
-<p>We are happy to announce the availability of <a href="/releases/spark-release-3-4-1.html" title="Spark Release 3.4.1">Spark 3.4.1</a>! Visit the <a href="/releases/spark-release-3-4-1.html" title="Spark Release 3.4.1">release notes</a> to read about the new features, or <a href="/downloads.html">download</a> the release today.</p>
+<p>Spark 3.5.4 is the third maintenance release containing security and correctness fixes. This release is based on the branch-3.5 maintenance branch of Spark. We strongly recommend all 3.5 users to upgrade to this stable release.</p>
+
+<h3 id="notable-changes">Notable changes</h3>
+
+<ul>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-47702">[SPARK-47702]</a>: Remove Shuffle service endpoint from the locations list when RDD block is removed form a node</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-48155">[SPARK-48155]</a>: AQEPropagateEmptyRelation for join should check if remain child is just BroadcastQueryStageExec</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49261">[SPARK-49261]</a>: Don&#8217;t replace literals in aggregate expressions with group-by expressions</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49294">[SPARK-49294]</a>: Add width attribute for shuffle-write-time checkbox</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49501">[SPARK-49501]</a>: Fix double-escaping of table location</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49595">[SPARK-49595]</a>: Fix <code class="language-plaintext highlighter-rouge">DataFrame.unpivot/melt</code> in Spark Connect Scala Client</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49628">[SPARK-49628]</a>: ConstantFolding should copy stateful expression before evaluating</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49695">[SPARK-49695]</a>: Postgres fix xor push-down</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49699">[SPARK-49699]</a>: Disable PruneFilters for streaming workloads</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49743">[SPARK-49743]</a>: OptimizeCsvJsonExpr should not change schema fields when pruning GetArrayStructFields</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49782">[SPARK-49782]</a>: ResolveDataFrameDropColumns rule resolves UnresolvedAttribute with child output</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49791">[SPARK-49791]</a>: Make DelegatingCatalogExtension more extendable</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49804">[SPARK-49804]</a>: Fix to use the exit code of executor container always</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49816">[SPARK-49816]</a>: Should only update out-going-ref-count for referenced outer CTE relation</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49819">[SPARK-49819]</a>: Disable CollapseProject for correlated subqueries in projection over aggregate correctly</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49829">[SPARK-49829]</a>: Fix the bug on the optimization on adding input to state store in stream-stream join</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49836">[SPARK-49836]</a>: Fix possibly broken query when window is provided to window/session_window fn</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49843">[SPARK-49843]</a>: Fix change comment on char/varchar columns</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49959">[SPARK-49959]</a>: Fix ColumnarArray.copy() to read nulls from the correct offset</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-49979">[SPARK-49979]</a>: Fix AQE hanging issue when collecting twice on a failed plan</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50021">[SPARK-50021]</a>: Fix <code class="language-plaintext highlighter-rouge">ApplicationPage</code> to hide App UI links when UI is disabled</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50022">[SPARK-50022]</a>: Fix <code class="language-plaintext highlighter-rouge">MasterPage</code> to hide App UI links when UI is disabled</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50087">[SPARK-50087]</a>: Robust handling of boolean expressions in CASE WHEN for MsSqlServer and future connectors</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50176">[SPARK-50176]</a>: Disallow reattaching after the session is closed</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50195">[SPARK-50195]</a>: Fix <code class="language-plaintext highlighter-rouge">StandaloneRestServer</code> to propagate <code class="language-plaintext highlighter-rouge">spark.app.name</code> to <code class="language-plaintext highlighter-rouge">SparkSubmit</code> properly</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50210">[SPARK-50210]</a>: Fix <code class="language-plaintext highlighter-rouge">SparkSubmit</code> to show REST API <code class="language-plaintext highlighter-rouge">kill</code> response properly</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50235">[SPARK-50235]</a>: Clean up ColumnVector resource after processing all rows in ColumnarToRowExec</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50258">[SPARK-50258]</a>: Fix output column order changed issue after AQE optimization</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50312">[SPARK-50312]</a>: SparkThriftServer createServer parameter passing error when kerberos is true</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50421">[SPARK-50421]</a>: Fix executor related memory config incorrect when multiple resource profiles worked</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50433">[SPARK-50433]</a>: Fix configuring log4j2 guide docs for Spark on YARN and UT</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50463">[SPARK-50463]</a>: Fix <code class="language-plaintext highlighter-rouge">ConstantColumnVector</code> with Columnar to Row conversion</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50483">[SPARK-50483]</a>: BlockMissingException should be thrown even if ignoreCorruptFiles is enabled</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50492">[SPARK-50492]</a>: Fix java.util.NoSuchElementException when event time column is dropped after dropDuplicatesWithinWatermark</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50498">[SPARK-50498]</a>: Avoid unnecessary py4j call in <code class="language-plaintext highlighter-rouge">listFunctions</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50505">[SPARK-50505]</a>: Fix <code class="language-plaintext highlighter-rouge">spark.storage.replication.proactive</code> default value documentation</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50510">[SPARK-50510]</a>: Fix sporadic ReattachableExecuteSuite failure</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50545">[SPARK-50545]</a>: <code class="language-plaintext highlighter-rouge">AccessControlException</code> should be thrown even if <code class="language-plaintext highlighter-rouge">ignoreCorruptFiles</code> is enabled</li>
+</ul>
+
+<h3 id="dependency-changes">Dependency changes</h3>
+<p>While being a maintenance release we did still upgrade some dependencies in this release they are:</p>
+<ul>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50150">[SPARK-50150]</a>: Upgrade Jetty to 9.4.56.v20240826</li>
+  <li><a href="https://issues.apache.org/jira/browse/SPARK-50316">[SPARK-50316]</a>: Upgrade ORC to 1.9.5</li>
+</ul>
+
+<p>You can consult JIRA for the <a href="https://s.apache.org/spark-3.5.4">detailed changes</a>.</p>
+
+<p>We would like to acknowledge all community members for contributing patches to this release.</p>
 
 
 <p>

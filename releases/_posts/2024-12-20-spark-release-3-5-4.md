@@ -55,7 +55,7 @@ Spark 3.5.4 is the third maintenance release containing security and correctness
 - [[SPARK-50545]](https://issues.apache.org/jira/browse/SPARK-50545): `AccessControlException` should be thrown even if `ignoreCorruptFiles` is enabled
 
 ### Dependency changes
-
+While being a maintenance release we did still upgrade some dependencies in this release they are:
 - [[SPARK-50150]](https://issues.apache.org/jira/browse/SPARK-50150): Upgrade Jetty to 9.4.56.v20240826
 - [[SPARK-50316]](https://issues.apache.org/jira/browse/SPARK-50316): Upgrade ORC to 1.9.5
 
